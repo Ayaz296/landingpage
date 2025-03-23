@@ -1,0 +1,347 @@
+body {
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+html, body {
+    overflow-y: scroll; /* Keeps smooth scrolling */
+    scroll-snap-type: y mandatory; /* Snaps between sections */
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    scroll-behavior: smooth;
+      
+}
+ 
+@keyframes slide-in {
+    from {
+        
+        opacity: 0.5;
+        
+        transform: translateX(10vh);
+    }
+
+    to {
+        
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+
+
+
+/* Navigation Sidebar (Fixed Vertical Bar) */
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    
+}
+
+/* Navigation Links */
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1em;
+    color: #3A6B7E;
+    display: block;
+    padding: 1.12em 0;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ;
+}
+
+/* Hover Effect for Links */
+.navbar a:hover {
+    background-color: #ececec;
+    transform: scale(1.095);
+}
+
+
+
+/* EXPLORE PAGE*/
+
+/* The Header 1 */
+.header {
+    scroll-snap-align: start;
+    position: relative;
+    top: 3%;
+    left: 3.5%;
+    text-align: center;
+    transition: ease;
+    margin-bottom: 6%;
+    padding-top: 1%;
+    color: #4A774F;
+}
+
+.content{
+    position: relative;
+    margin-left: 5%;
+    animation: slide-in  1.9s ease;
+    scroll-snap-align: start;
+    padding-top: 0.05rem;
+    background-color: #ffffff;
+}
+
+/* The Header-2 */
+.heading2 {
+    position: relative;
+    font-family: "Poppins", serif;
+    font-size: 4rem;
+    margin-bottom: 1.3rem;
+    left: 24%;
+    color: #6F8F72;
+}
+
+
+
+/* Style for Paragraph */
+.para {
+    position: relative;
+    font-family: "Poppins", serif;
+    font-size: 1.3em;
+    line-height: 1.5;
+    text-align: left;
+    width: 47%;
+    margin-bottom: 3%;
+    left: 24%;
+    color: #2c2c2c;
+    box-shadow: 0 0.4em 1em rgba(0,0,0,0.03);
+    padding: 1em;
+    border-radius: 1em;
+    background-color: #F6F0E8;
+    text-indent: 0;
+    text-shadow: none;
+    line-height: 1.5em;
+}
+
+/* Image */
+.circular-image {
+    position: relative;
+    width: 43.7rem;
+    height: 30.5rem;
+    border-radius: 3.75rem;
+    box-shadow:  0 0.312rem 0.625rem #00000033;
+    transition: all 0.7s;
+    left: 24%;
+    margin-bottom: 2.9%;  
+    z-index: 100;
+    border: none;
+}
+
+.circular-image:hover{
+    transform: scale(1.02);
+    border-radius: 1.25rem;
+    box-shadow: 0 0.5rem 0.625rem #0000007f;
+    z-index: 100;
+}
+
+
+
+/* HOME-PAGE */
+.parallax1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("./assets/pic_09.jpg"); 
+    background-position: center;
+    background-size: cover;
+    scroll-snap-align: start;
+}
+
+/* Home Page Header */
+.parallax1 h1{
+    position: absolute;
+    top: 3.70em;
+    left: 1%;
+    transform: translateX(-50% -50%);
+    font-size: 4.38em;
+    color: #303030EA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    animation: fade-in  1.9s ease;
+
+}
+
+/*Mouse icon*/
+.parallax1 img{
+    position: absolute;
+    top: 62%;
+    left: 35%;
+    z-index: 11;
+    transform: scale(0.095); 
+    opacity: 0.25;
+    border: none;
+}
+
+/* Button */
+.btn {
+   position: absolute;
+   top: 50%;
+   left: 46%;
+   transform: translate( -50% -50%);
+   font-family: "Poppins",sans-serif;
+   font-size: 1.2em;
+   
+    width: 8.38em;
+    height: 3.66em;
+    border-radius: 5.243em;
+    background: #22aea7;
+    border-color: transparent;
+    color: #F0F8FF;
+    transition: all 0.6s;
+    animation: fade-in  1.9s ease;
+}
+
+.btn:hover {
+    transform: scale(1.07) rotate(5deg);
+    color: #303030EA;
+    box-shadow: 0 0.367em 0.629em #00000041; 
+}
+   
+
+
+/* Background Image */
+.fullscreen2 {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* CONTACT FORM */
+.container {
+    width: 35.8%;
+    padding: 1.24em;
+    background-color: #FFFFFFD8;
+    border-radius: 1.24em;
+    box-shadow: 0 0.31em 0.62em #00000033;
+    position: relative;
+    left: 33%;
+    top: 3.72em;
+    margin-bottom: 9.3em;
+    backdrop-filter: blur(0.93em);
+}
+
+.container h1 {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2%;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 0.31em;
+    background-color: #F0F0F092;
+    font-family: "Poppins", sans-serif;
+    backdrop-filter: blur(0.93em);
+}
+
+form button {
+    display: block;
+    width: 100%;
+    height: 3.2em;
+    border-radius: 0.8em;
+    border: none;
+    cursor: pointer;
+    background-color: #434343;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+form button:hover {
+    background-color: #515151;
+}
+
+/* Contact Info */
+.contacts h2 {
+    text-align: center;
+    translate: 2.5%;
+    margin-bottom: 3.72rem;
+    color: #303030;
+}
+
+.contacts p {
+    position: relative;
+    text-align: center;
+    left: 2.3%;
+    display: block;
+    padding: 0.3rem;
+    font-family: "Poppins", sans-serif;
+    color: #303030;
+    
+}
+
+.contacts a {
+    text-decoration: none;
+    color: #303030;
+    transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.contacts a:hover {
+    color: #10D8B0;
+}
+
+/*INSIGHT*/
+
+table.t1 {
+    position: relative;
+    left: 36%;
+    width: 30%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+
+.t1 th{
+    background-color: #5d8d63;
+}
+
+.t1 th, .t1 td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.foot{
+    position: relative;
+    scroll-snap-align: start;
+    left: 28%;
+    color: #868787;
+    
+}
